@@ -6,11 +6,11 @@ import { Map, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import mapMarkerImg from '../images/map-marker.svg';
-import '../styles/pages/orphanages-map.css';
+import { PageMap } from '../styles/pages/orphanages-map.js';
 
 function OrphanagesMap() {
     return (
-        <div id="page-map">
+        <PageMap>
             <aside>
                 <header>
                     <img src={mapMarkerImg} alt="Happy" />
@@ -36,7 +36,7 @@ function OrphanagesMap() {
             <Link to="" className="create-orphanage">
                 <FiPlus size={32} color="#fff" />
             </Link>
-        </div>
+        </PageMap>
     )
 }
 

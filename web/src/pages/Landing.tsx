@@ -2,13 +2,13 @@ import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-import '../styles/pages/landing.css';
+import { PageLanding, ContentWrapper } from '../styles/pages/landing.js';
 import logoImg from '../images/logo.svg';
 
 function Landing() {
     return (
-        <div id="page-landing">
-            <div className="content-wrapper">
+        <PageLanding>
+            <ContentWrapper>
                 <img src={logoImg} alt="Happy" />
 
                 <main>
@@ -24,8 +24,8 @@ function Landing() {
                 <Link to="/app" className="enter-app">
                     <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
                 </Link>
-            </div>
-        </div>
+            </ContentWrapper>
+        </PageLanding>
     )
 }
 
