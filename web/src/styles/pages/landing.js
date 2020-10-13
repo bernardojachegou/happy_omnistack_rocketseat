@@ -4,7 +4,7 @@ import LandingBackground from '../../images/landing.svg';
 export const PageLanding = styled.div`
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    /* background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%); */
     display: flex;
     justify-content: center;
     align-items: center;
