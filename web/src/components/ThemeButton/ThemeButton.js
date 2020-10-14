@@ -9,8 +9,8 @@ const ThemeButton = ({ theme, toggleTheme }) => {
     const isLight = theme === 'light';
     return (
         <ToggleButton onClick={toggleTheme}>
-            <SunIcon />
-            <MoonIcon />
+            {/* <SunIcon />
+            <MoonIcon /> */}
         </ToggleButton>
     );
 };
