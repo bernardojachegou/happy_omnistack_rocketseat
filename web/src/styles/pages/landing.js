@@ -29,7 +29,7 @@ export const ContentWrapper = styled.div`
         bottom: 0;
         width: 80px;
         height: 80px;
-        background-color: #ffd666;
+        background-color: #C194E3;
         border-radius: 30px;
         display: flex;
         align-items: center;
@@ -38,7 +38,7 @@ export const ContentWrapper = styled.div`
     }
 
     .enter-app:hover {
-        background-color: #96feff;
+        background-color: #87689f;
     }
 
     main {

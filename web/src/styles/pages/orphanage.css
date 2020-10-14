@@ -12,7 +12,7 @@
   margin: 64px auto;
 
   background: #FFFFFF;
-  border: 1px solid #D3E2E5;
+  border: 1px solid #9f9d68;
   border-radius: 20px;
 
   overflow: hidden;
@@ -60,7 +60,7 @@
 }
 
 .orphanage-details .orphanage-details-content h1 {
-  color: #4D6F80;
+  color: #87689f;
   font-size: 54px;
   line-height: 54px;
   margin-bottom: 8px;
@@ -68,14 +68,14 @@
 
 .orphanage-details .orphanage-details-content p {
   line-height: 28px;
-  color: #5C8599;
+  color: #87689f;
   margin-top: 24px;
 }
 
 .orphanage-details .orphanage-details-content .map-container {
   margin-top: 64px;
   background: #E6F7FB;
-  border: 1px solid #B3DAE2;
+  border: 1px solid #87689f;
   border-radius: 20px;
 }
 
@@ -86,7 +86,7 @@
 
 .orphanage-details .orphanage-details-content .map-container footer a {
   line-height: 24px;
-  color: #0089A5;
+  color: #87689f;
   text-decoration: none;
 }
 
@@ -99,19 +99,18 @@
   width: 100%;
   height: 1px;
   border: 0;
-  background: #D3E2E6;
+  background: #9f9d68;
   margin: 64px 0;
 }
 
 .orphanage-details .orphanage-details-content h2 {
   font-size: 36px;
   line-height: 46px;
-  color: #4D6F80;
+  color: #87689f;
 }
 
 .orphanage-details .orphanage-details-content .open-details {
   margin-top: 24px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
@@ -130,15 +129,15 @@
 
 .orphanage-details .orphanage-details-content .open-details div.hour {
   background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
-  border: 1px solid #B3DAE2;
-  color: #5C8599;
+  border: 1px solid #87689f;
+  color: #87689f;
 }
 
 
 .orphanage-details .orphanage-details-content .open-details div.open-on-weekends {
   background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
-  border: 1px solid #A1E9C5;
-  color: #37C77F;
+  border: 1px solid #9f9d68;
+  color: #9f9d68;
 }
 
 .orphanage-details .orphanage-details-content .open-details div.open-on-weekends.not-oppening-on-weekends {
@@ -154,7 +153,7 @@
   height: 64px;
   border: 0;
   cursor: pointer;
-  background: #3CDC8C;
+  background: #C194E3;
   border-radius: 20px;
   color: #FFFFFF;
   font-weight: 800;
@@ -171,5 +170,5 @@
 }
 
 .orphanage-details .orphanage-details-content button.contact-button:hover {
-  background: #36CF82;
+  background: #87689f;
 }

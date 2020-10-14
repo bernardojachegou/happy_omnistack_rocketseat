@@ -47,7 +47,7 @@ export const PageMap = styled.div`
         bottom: 40px;
         width: 64px;
         height: 64px;
-        background-color: #15c3d6;
+        background-color: #C194E3;
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -57,7 +57,7 @@ export const PageMap = styled.div`
     }
 
     .create-orphanage:hover {
-        background-color: #17d6ed;
+        background-color: #87689f;
     }
 
     .map-popup .leaflet-popup-content-wrapper {
@@ -66,7 +66,7 @@ export const PageMap = styled.div`
     }
 
     .map-popup .leaflet-popup-content {
-        color: #0089a5;
+        color: #87689f;
         font-size: 20px;
         font-weight: bold;
         margin: 8px 12px;
@@ -79,7 +79,7 @@ export const PageMap = styled.div`
     .map-popup .leaflet-popup-content a {
         width: 40px;
         height: 40px;
-        background: #15c3d6;
+        background: #C194E3;
         box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
         border-radius: 12px;
         display: flex;

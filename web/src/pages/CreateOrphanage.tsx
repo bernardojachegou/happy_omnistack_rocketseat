@@ -137,7 +137,7 @@ export default function CreateOrphanage() {
                 })}
 
                 <label htmlFor="image[]" className="new-image">
-                  <FiPlus size={24} color="#15b6d6" />
+                  <FiPlus size={24} color="#c194e3" />
                 </label>
               </div>
               <input multiple onChange={handleSelectImages} type="file" id="image[]" />
