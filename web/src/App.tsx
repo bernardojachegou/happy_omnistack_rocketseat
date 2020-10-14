@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+
+import 'leaflet/dist/leaflet.css';
+
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './styles/global.js';
-
 import { lightTheme, darkTheme } from './styles/themes.js';
-import Routes from './routes';
 import ThemeButton from './components/ThemeButton/ThemeButton.js';
+
+import Routes from './routes';
 
 function App() {
   const [theme, setTheme] = useState('light');
