@@ -2,11 +2,16 @@ import React from 'react';
 import { Image, View, ScrollView, Text, StyleSheet, Dimensions } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { Feather, FontAwesome } from '@expo/vector-icons';
+import { RectButton } from 'react-native-gesture-handler';
+import { useRoute } from '@react-navigation/native';
 
 import mapMarkerImg from '../../images/map-marker.png';
-import { RectButton } from 'react-native-gesture-handler';
 
 export default function OrphanageDetails() {
+  const route = useRoute();
+
+  console.log(route.params);
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.imagesContainer}>
@@ -20,24 +25,24 @@ export default function OrphanageDetails() {
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>Orf. Nova Esperança</Text>
         <Text style={styles.description}>Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.</Text>
-      
+
         <View style={styles.mapContainer}>
-          <MapView 
+          <MapView
             initialRegion={{
               latitude: -27.2092052,
               longitude: -49.6401092,
               latitudeDelta: 0.008,
               longitudeDelta: 0.008,
-            }} 
+            }}
             zoomEnabled={false}
             pitchEnabled={false}
             scrollEnabled={false}
             rotateEnabled={false}
             style={styles.mapStyle}
           >
-            <Marker 
+            <Marker
               icon={mapMarkerImg}
-              coordinate={{ 
+              coordinate={{
                 latitude: -27.2092052,
                 longitude: -49.6401092
               }}
@@ -48,7 +53,7 @@ export default function OrphanageDetails() {
             <Text style={styles.routesText}>Ver rotas no Google Maps</Text>
           </View>
         </View>
-      
+
         <View style={styles.separator} />
 
         <Text style={styles.title}>Instruções para visita</Text>
@@ -65,7 +70,7 @@ export default function OrphanageDetails() {
           </View>
         </View>
 
-        <RectButton style={styles.contactButton} onPress={() => {}}>
+        <RectButton style={styles.contactButton} onPress={() => { }}>
           <FontAwesome name="whatsapp" size={24} color="#FFF" />
           <Text style={styles.contactButtonText}>Entrar em contato</Text>
         </RectButton>
