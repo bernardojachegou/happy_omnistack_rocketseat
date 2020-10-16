@@ -1,9 +1,11 @@
-#page-orphanage {
+import styled from 'styled-components';
+
+export const PageOrphanage = styled.div`
   display: flex;
   min-height: 100vh;
 }
 
-#page-orphanage main {
+main {
   flex: 1;
 }
 
@@ -172,3 +174,10 @@
 .orphanage-details .orphanage-details-content button.contact-button:hover {
   background: #87689f;
 }
+
+`
+
+
+
+
+

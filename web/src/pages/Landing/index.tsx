@@ -2,8 +2,8 @@ import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-import { PageLanding, ContentWrapper } from '../styles/pages/landing.js';
-import logoImg from '../images/logo.svg';
+import { PageLanding, ContentWrapper } from './styles';
+import logoImg from '../../images/logo.svg';
 
 function Landing() {
     return (

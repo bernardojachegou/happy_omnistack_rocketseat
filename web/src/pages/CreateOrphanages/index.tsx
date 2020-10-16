@@ -2,15 +2,13 @@ import React, { FormEvent, useState, ChangeEvent } from "react";
 import { Map, Marker, TileLayer, } from 'react-leaflet';
 import { FiPlus } from "react-icons/fi";
 import { LeafletMouseEvent } from 'leaflet';
-
-import mapIcon from '../utils/mapIcon';
-
-import Sidebar from "../components/Sidebar/Sidebar";
-import '../styles/pages/create-orphanage.css';
-import api from "../services/api";
 import { useHistory } from "react-router-dom";
 
-
+import { PageCreateOrphanage } from './styles'
+import AppSidebar from "../../components/AppSidebar/index";
+import AppButton from '../../components/AppButton/index'
+import mapIcon from '../../utils/mapIcon';
+import api from "../../services/api";
 
 export default function CreateOrphanage() {
 
@@ -80,8 +78,8 @@ export default function CreateOrphanage() {
   }
 
   return (
-    <div id="page-create-orphanage">
-      <Sidebar />
+    <PageCreateOrphanage id="page-create-orphanage">
+      <AppSidebar />
 
       <main>
         <form onSubmit={handleSubmit} className="create-orphanage-form">
@@ -187,12 +185,11 @@ export default function CreateOrphanage() {
             </div>
           </fieldset>
 
-          <button className="confirm-button" type="submit">
-            Confirmar
-          </button>
+          <AppButton text="Confirmar" type="submit" />
+
         </form>
       </main>
-    </div>
+    </PageCreateOrphanage>
   );
 }
 

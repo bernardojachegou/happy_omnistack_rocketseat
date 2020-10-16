@@ -4,10 +4,10 @@ import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { useParams } from 'react-router-dom';
 
-import '../styles/pages/orphanage.css';
-import Sidebar from "../components/Sidebar/Sidebar";
-import mapIcon from '../utils/mapIcon';
-import api from "../services/api";
+import { PageOrphanage } from './styles'
+import AppSidebar from "../../components/AppSidebar/index";
+import mapIcon from '../../utils/mapIcon';
+import api from "../../services/api";
 
 interface Orphanage {
   latitude: number;
@@ -43,8 +43,8 @@ export default function Orphanage() {
   }
 
   return (
-    <div id="page-orphanage">
-      <Sidebar />
+    <PageOrphanage id="page-orphanage">
+      <AppSidebar />
 
       <main>
         <div className="orphanage-details">
@@ -122,6 +122,6 @@ export default function Orphanage() {
           </div>
         </div>
       </main>
-    </div>
+    </PageOrphanage>
   );
 }
