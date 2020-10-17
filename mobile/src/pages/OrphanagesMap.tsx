@@ -51,8 +51,8 @@ export default function OrphanagesMap() {
                             key={orphanage.id}
                             icon={mapMarker}
                             calloutAnchor={{
-                                x: 2.7,
-                                y: 0.8,
+                                x: 2.3,
+                                y: 0.7,
                             }}
                             coordinate={{
                                 latitude: orphanage.latitude,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     calloutText: {
         // Mudar as cores de acordo como novo set
         fontFamily: 'Nunito_700Bold',
-        color: '#0089a5',
+        color: '#87689f',
         fontSize: 14,
     },
 
@@ -126,13 +126,13 @@ const styles = StyleSheet.create({
 
     footerText: {
         fontFamily: 'Nunito_700Bold',
-        color: '#8fa7b3',
+        color: '#9f9d68',
     },
 
     createOrphanageButton: {
         width: 56,
         height: 56,
-        backgroundColor: '#15c3d6',
+        backgroundColor: '#E3DB94',
         borderRadius: 20,
 
         justifyContent: 'center',

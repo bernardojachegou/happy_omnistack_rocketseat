@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
 
   nextButton: {
-    backgroundColor: '#15c3d6',
+    backgroundColor: '#E3DB94',
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

@@ -105,15 +105,15 @@ export default function OrphanageDetails() {
         <Text style={styles.description}>{orphanage.instructions}</Text>
 
         <View style={styles.scheduleContainer}>
-          <View style={[styles.scheduleItem, styles.scheduleItemBlue]}>
-            <Feather name="clock" size={40} color="#2AB5D1" />
-            <Text style={[styles.scheduleText, styles.scheduleTextBlue]}>Segunda à Sexta {orphanage.opening_hours}</Text>
+          <View style={[styles.scheduleItem, styles.scheduleItemPurple]}>
+            <Feather name="clock" size={40} color="#87689f" />
+            <Text style={[styles.scheduleText, styles.scheduleTextPurple]}>Segunda à Sexta {orphanage.opening_hours}</Text>
           </View>
 
           {orphanage.open_on_weekends ? (
-            <View style={[styles.scheduleItem, styles.scheduleItemGreen]}>
-              <Feather name="info" size={40} color="#39CC83" />
-              <Text style={[styles.scheduleText, styles.scheduleTextGreen]}>Atendemos fim de semana</Text>
+            <View style={[styles.scheduleItem, styles.scheduleItemYellow]}>
+              <Feather name="info" size={40} color="#9f9d68" />
+              <Text style={[styles.scheduleText, styles.scheduleTextYellow]}>Atendemos fim de semana</Text>
             </View>
           ) : (
               <View style={[styles.scheduleItem, styles.scheduleItemRed]}>
@@ -152,14 +152,14 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#4D6F80',
+    color: '#87689f',
     fontSize: 30,
     fontFamily: 'Nunito_700Bold',
   },
 
   description: {
     fontFamily: 'Nunito_600SemiBold',
-    color: '#5c8599',
+    color: '#87689f',
     lineHeight: 24,
     marginTop: 16,
   },
@@ -168,9 +168,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     overflow: 'hidden',
     borderWidth: 1.2,
-    borderColor: '#B3DAE2',
+    borderColor: '#9f9d68',
     marginTop: 40,
-    backgroundColor: '#E6F7FB',
+    backgroundColor: '#E3DB94',
   },
 
   mapStyle: {
@@ -186,13 +186,13 @@ const styles = StyleSheet.create({
 
   routesText: {
     fontFamily: 'Nunito_700Bold',
-    color: '#0089a5'
+    color: '#FFFFFF'
   },
 
   separator: {
     height: 0.8,
     width: '100%',
-    backgroundColor: '#D3E2E6',
+    backgroundColor: '#9f9d68',
     marginVertical: 40,
   },
 
@@ -207,17 +207,17 @@ const styles = StyleSheet.create({
     padding: 20,
   },
 
-  scheduleItemBlue: {
-    backgroundColor: '#E6F7FB',
+  scheduleItemPurple: {
+    backgroundColor: '#f9f2ff',
     borderWidth: 1,
-    borderColor: '#B3DAE2',
+    borderColor: '#87689f',
     borderRadius: 20,
   },
 
-  scheduleItemGreen: {
-    backgroundColor: '#EDFFF6',
+  scheduleItemYellow: {
+    backgroundColor: '#fffff5',
     borderWidth: 1,
-    borderColor: '#A1E9C5',
+    borderColor: '#9f9d68',
     borderRadius: 20,
   },
 
@@ -235,12 +235,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 
-  scheduleTextBlue: {
-    color: '#5C8599'
+  scheduleTextPurple: {
+    color: '#87689f'
   },
 
-  scheduleTextGreen: {
-    color: '#37C77F'
+  scheduleTextYellow: {
+    color: '#9f9d68'
   },
 
   scheduleTextRed: {

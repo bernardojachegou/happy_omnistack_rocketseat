@@ -76,8 +76,8 @@ main {
 
 .orphanage-details .orphanage-details-content .map-container {
   margin-top: 64px;
-  background: #E6F7FB;
-  border: 1px solid #87689f;
+  background: #E3DB94;
+  border: 1px solid #9f9d68;
   border-radius: 20px;
 }
 
@@ -88,7 +88,7 @@ main {
 
 .orphanage-details .orphanage-details-content .map-container footer a {
   line-height: 24px;
-  color: #87689f;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -130,14 +130,14 @@ main {
 }
 
 .orphanage-details .orphanage-details-content .open-details div.hour {
-  background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
+  background-color: #f9f2ff;
   border: 1px solid #87689f;
   color: #87689f;
 }
 
 
 .orphanage-details .orphanage-details-content .open-details div.open-on-weekends {
-  background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
+  background-color: #fffff5;
   border: 1px solid #9f9d68;
   color: #9f9d68;
 }

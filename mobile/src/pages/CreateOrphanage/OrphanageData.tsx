@@ -125,7 +125,7 @@ export default function OrphanageData() {
       </View>
 
       <TouchableOpacity style={styles.imagesInput} onPress={handleSelectImages}>
-        <Feather name="plus" size={24} color="#15B6D6" />
+        <Feather name="plus" size={24} color="#9f9d68" />
       </TouchableOpacity>
 
       <Text style={styles.title}>Visitação</Text>
@@ -150,7 +150,7 @@ export default function OrphanageData() {
         <Text style={styles.label}>Atende final de semana?</Text>
         <Switch
           thumbColor="#fff"
-          trackColor={{ false: '#ccc', true: '#39CC83' }}
+          trackColor={{ false: '#ccc', true: '#C194E3' }}
           value={open_on_weekends}
           onValueChange={open_on_weekends => setOpenOnWeekends(open_on_weekends)}
         />
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#5c8599',
+    color: '#9f9d68',
     fontSize: 24,
     fontFamily: 'Nunito_700Bold',
     marginBottom: 32,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
   },
 
   label: {
-    color: '#8fa7b3',
+    color: '#87689f',
     fontFamily: 'Nunito_600SemiBold',
     marginBottom: 8,
   },
@@ -191,8 +191,8 @@ const styles = StyleSheet.create({
 
   input: {
     backgroundColor: '#fff',
-    borderWidth: 1.4,
-    borderColor: '#d3e2e6',
+    borderWidth: 0.8,
+    borderColor: '#9f9d68',
     borderRadius: 20,
     height: 56,
     paddingVertical: 18,
@@ -216,8 +216,8 @@ const styles = StyleSheet.create({
   imagesInput: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
     borderStyle: 'dashed',
-    borderColor: '#96D2F0',
-    borderWidth: 1.4,
+    borderColor: '#9f9d68',
+    borderWidth: 1,
     borderRadius: 20,
     height: 56,
     justifyContent: 'center',
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
   },
 
   nextButton: {
-    backgroundColor: '#15c3d6',
+    backgroundColor: '#E3DB94',
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
