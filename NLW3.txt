@@ -1,0 +1,219 @@
+#############################################################################################
+--------------------------------------INTRODUÇÃO---------------------------------------------
+#############################################################################################
+1. Instalações iniciais e objetivos
+	1.1 Instalação do Node.js
+	1.2 Explicação sobre Rest API
+	1.3 O motivo de usar TypeScript
+
+2. Criação do projeto com React
+	2.1 npx create-react-app nome_projeto --template typescript;
+	1.2 Remoção de arquivos (Não utilizáveis);
+	1.3 Teste da aplicação (npm start);
+	1.4 Explicação sobre conceitos (Base do React);
+	1.4.1 JSX e Componentes;
+	1.4.2 Propriedades (Atributo);
+#############################################################################################
+----------------------------------INICIO-DO-PROJETO-WEB--------------------------------------
+#############################################################################################
+1. Criação da Landing Page
+	1.1 Layout do app;
+	1.2 Exportação de imagens no Figma;
+	1.3 Criação do CSS global;
+	1.4 Criação de componentes da landing page;
+	1.5 Estilização da landing page;
+	1.6 Utilização da React-Icons;
+
+2. Criação das rotas usando React-router-dom
+	2.1 Importação do BrowserRouter, Switch e Route;
+	2.2 Criação das rotas no arquivo routes;
+	2.3 Explicação conceito de SPA usando Link;
+
+3. Adição do Map dentro do projeto WEB
+	3.1 Instalação do react-leaflet;
+	3.2 Uso e propriedades do Map;
+	3.3 Explicação sobreo TileLayer;
+	3.4 Uso do Z-index para sobrepor elementos;
+#############################################################################################
+-----------------------------------------BACKEND---------------------------------------------
+#############################################################################################
+1. Criação do Backend
+	1.1 Inicialização do projeto com npm init -y;
+	1.2 Instalação do express;
+	1.3 configuração do server.ts (listener);
+	1.4 Criação do tsconfig.json (npx tsc --init);
+	1.5 Instalação do ts-node-dev (criação de script + flags);
+
+2. Explicação das Rotas/Métodos
+	2.1 Criação de uma rota (2 parâmetros);
+	2.1.1 Retornar sempre em formato JSON;
+	2.2 Métodos HTTP = GET, POST, PUT, DELETE;
+	2.3 Recurso = usuário (exemplo);
+	2.4 Parâmetros - Query Params: (filtros e Paginação);
+	2.4.1 Parâmetros - Route Params: (Identificar um recurso [:id]);
+ 	2.4.2 Parâmetros - Body: (Tipo json/Multpart-form);
+
+3. Desenvolvimento da aplicação (Banco de dados)
+	3.1 Instalação do typeorm (Object Relational Mapping;
+	3.1.1 Maior nível de abstração (Uma classe para cada tabela);
+	3.2 Criação da conexão com o banco de dados (connection.ts);
+	3.3 Criação das tabelas do BD usando migrations;
+	3.3.1 Configuração do ormconfig para a criação das migrations;
+	3.4 Explicação sobre o método UP e o método DOWN das migrations; 
+	3.5 Criação do banco de dados com (npm run typeorm migration:run)
+
+4. Criação das rotas
+	4.1 Desestruturação do request.body;
+	4.2 Aplicação das funções para criação e salvamento do objeto;
+	4.2 Aplicação de boas práticas usando status(201);
+	4.3 Abstração do código (Model/Controller);
+	4.3.1 Criação do arquivo OrphanagesController (CRUD functions);
+	4.3.2 Criação da função de listar (CRUD functions);
+	4.3.3 Métodos Controller (Index, Show, Create, Update, Delete);
+	4.3.4 Criação da função de listar apenas um (CRUD functions);
+
+5. Upload de imagens (lógica)
+	5.1 Criação de uma nova migration create_images;
+	5.2 Configuração da migrations com os métodos usados;
+	5.3 Instalação e aplicação do multer;
+	5.3.1 Configuração de local das imagens;
+	5.3.2 Importação do método no routes;
+	5.4 Upload de imagem através do Multipart/form;
+
+6. Upload de imagens no banco de dados
+	5.1 Criação do model de imagens;
+	5.2 Elaboração da relação entre as tabelas(OneToMany, JoinColumn);
+	5.3 Configuração de salvamento das imagens dentro do projeto;
+	5.4 Criação das views para visualização das imagens;
+	5.5 Configuração do server.ts para exibição das imagens (url);
+
+7. Validações e execções
+	7.1 Instalação do express-async-errors;
+	7.2 Criação e configuração do arquivo handler(error);
+	7.3 Importação do handler no server.ts;
+	7.4 Teste e exibição de erros;
+	7.5 Instalação do Yup e importação no Controller;
+	7.6 Configuração do schema de validação;
+	7.7 Exibição de erros usando ValidationError(Yup);
+	X.X Instalação do CORS
+#############################################################################################
+-----------------------------------FINALIZANDO-O-PROJETO-WEB---------------------------------
+#############################################################################################
+1. Importação de novas páginas e criação de rotas
+	1.1 Download das páginas e importação no projeto html/css;
+	1.2 Criação de novas rotas de navegação;
+	1.3 Estilização do mapMarker;
+	1.4 Configurações dos Link to;
+	1.5 Teste de rotas;
+
+2. Criação de componentes genéricos
+	2.1 Verificação dos recursos parecidos/iguais;
+	2.2 Criação do aside de detalhes e criação de orfanato;
+	2.3 Aplicação do novo componente;
+	2.4 Conselhos e cuidados com criação de componentes;
+
+3. Conexação do backend com frontend
+	3.1 Instalação do axios;
+	3.2 Criação do arquivo api.ts (configuração do backend);
+	3.3 Carregamento de informações do backend de forma dinâmica;
+	3.4 Utilização de hooks (Funções dentro dos componentes);
+	3.5 Utilização do useEffect para fazer as chamadas da api;
+	3.6 Utilização do useState (Armazenamento de alterações);
+	3.6.1 02 parâmetros no useState (exemplo: user, setUser);
+	3.6.2 O set renderiza todo o componente (Ciclo de renderização);
+
+4. Aplicação de valores dinâmicos
+	4.1 Criação de interface para identificação dos atributos;
+	4.2 Utilização do método map para exibição de todos os orfanatos;
+	4.3 Configuração da propriedade key no Marker para identificação do campo único;
+	4.4 Aplicação dos valores no Detalhes de um orfanato;
+	4.5 Uso do useParams do react-router-dom;
+	4.6 Lembrar de passar o params.id dentro do useEffect;
+
+5. Configuração de troca de imagem na página de detalhes
+	5.1 Criação de um novo useState;
+	5.2 Passar o estado inicial dentro do array de imagens;
+	5.3 Pegar o index da imagem no map;
+	5.4 Passar um onClick no botão da imagem;
+	5.5 If ternário para fazer a seleção da imagem ativa;
+
+6. Criação de um novo orfanato (Formulário)
+	6.1 Configuração do posicionamento no map;
+	6.2 Criação de um novo estado;
+	6.3 Utilização do LeafletMouseEvent;
+	6.4 Desestruturação das variáveis e aplicação no Marker;
+	6.5 Criação de novos estados para captura dos dados;
+	6.5.1 Uso de value e onChange para pegar o target.value;
+
+7. Envio dos dados do formulário para o backend;
+	7.1 Criação da função para enviar os dados (handleSubmit);
+	7.2 Utilização do FormEvent(event) para evitar reload da página;
+	7.3 Criação de estado para pegar variável booleana através do botão;
+	7.4 Utilização do FormData para segurar os dados que irão para o backend;
+	7.5 forEach para envio das imagens;
+	7.6 Chamada da api (post) para envio dos dados e redirecionamento com useHistory;
+
+#############################################################################################
+----------------------------------DESENVOLVIMENTO-DO-MOBILE----------------------------------
+#############################################################################################
+1. Criação do projeto mobile com React Native
+	1.1 Como o React Native funciona;
+	1.2 Expo init para iniciar o projeto;
+	1.3 Visualizando o projeto com simulador/celular físico;
+	1.4 Diferenças entre React e React Native (Estilização);
+
+2. Configurações iniciais do projeto
+	2.1 Instalação do react-native-maps;
+	2.2 Uso do react-native-maps e parâmetros;
+	2.3 Importação de imagens (3x);
+	2.4 Aplicação do mapMarker e Marker;	
+	2.5 Estilização dos elementos inseridos no mapa;
+
+3. Trabalhando com fontes personalizadas no React Native
+	3.1 Instalação da fonte usando @expo-google-fonts/font_name
+	3.2 Importação da fonte useFonts + tamanhos específicos do @expo-google-fonts;
+	3.3 Uso de função pré-carregamento das fonts [fontsLoaded];
+
+4. Trabalhando com rotas no React Native
+	4.1 Instalação do @expo/react-navigation (seguir documentação); 
+	4.2 Criação do arquivo de rotas e importação do NavigatorContainer;
+	4.3 Importação das páginas da aplicação dentro do routes;
+	4.4 Elaboração da função para navegar entre páginas;	
+	4.5 Uso do useNavigation para fazer a navegação;
+#############################################################################################
+-------------------------------------FINALIZAOD-O-MOBILE-------------------------------------
+#############################################################################################
+1. Criação do fluxo de navegação (Rotas)
+	1.1 Página de seleção local no mapa;
+	1.2 Página de formulário;
+	1.3 Criação do componente Header;
+	1.4 Aplicação de props no Header, usando interface;
+	1.5 Importação de botões do header;
+	1.6 Substituição do botão TouchableOpacity por RectButton;
+
+2. Aplicação das telas faltantes e conexão com o backend
+	2.1 Utilização de ScrollView, TextInput(multiline), Switch;
+	2.2 Instalação do axios e configuração da api.ts; (usar IP da máquina)
+	2.3 Exposição de dados dos orfanatos (dinâmicamente);
+	2.3.1 -> useState, useEffect, interface, array.map + key;
+	2.4 Parâmetros da função que exibe detalhes do orfanato;
+
+3. Renderização das imagens do orfanato
+	3.1 Mudar ImagesView no backend para o ip e não localhost;
+	3.2 Fazer um map na tag de exibição das imagens;
+	3.3 Passar os parâmetros (key e image.url);	
+	3.4 Uso do Linking para pegar rotas no GoogleMaps;
+
+4. Envio de dados para criação de novo orfanato
+	4.1 Configuração de coordenadas no map;
+	4.1.1 Uso do MapEvent, função onPress para salvar a coordenada;
+	4.2 If para marcação dinâmica no mapa;
+	4.3 Carregamento de dados e envio para o backend (useState);
+	4.4 Criação da interface para passar os atributos e função para enviar os dados;
+
+5. Envio das imagens para o backend
+	5.1 Instalação do expo-image-picker;
+	5.2 Uso da tag Image do React Native (source/key);
+	5.3 Array para exibição das imagens;
+	5.4 Finalização da const data com forEach para as imagens;
+	5.5 Envio de dados sucesso na criação de novo cadastro;
