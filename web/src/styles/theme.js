@@ -20,10 +20,4 @@ export const darkTheme = {
     // Others;
     secondaryTextColor: '#C194E3',
 
-
-    // 
-    // iconColor: '#C194E3',
-    // iconColorDarker: '#87689f',
-    // primaryContainerBackgroundColor: '#fffff5',
-    // iconContainerBackgroundColor: '#f9f2ff',
 }
