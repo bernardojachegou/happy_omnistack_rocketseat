@@ -4,29 +4,26 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
-import happyIcon from '../../../assets/icon.png';
+import LandingImg from '../../images/landing.png';
 
 export default function HappyFirst() {
 
     const navigation = useNavigation();
 
     function handleHappyNextScreen() {
-        navigation.navigate('HappySecond');
+        navigation.navigate('OrphanagesMap');
     }
 
     return (
         <View style={styles.container}>
 
             <View style={styles.imageContainer}>
-                <Image source={happyIcon} style={styles.happyIcon} />
+                <Image source={LandingImg} />
             </View>
 
             <View style={styles.textContainer}>
                 <Text style={styles.title}>
-                    Leve felicidade para o mundo
-                </Text>
-                <Text style={styles.paragraph}>
-                    Visite orfanatos e mude o dia de muitas crianças.
+                    Escolha um orfanato no mapa e faça uma visita
                 </Text>
             </View>
 
@@ -47,31 +44,27 @@ const styles = StyleSheet.create({
     imageContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: 300,
+        paddingTop: 40,
     },
 
     happyIcon: {
-        width: 335,
-        height: 335,
+        width: 195,
+        height: 195,
     },
 
     textContainer: {
-        width: 380,
-        paddingHorizontal: 60,
-        marginBottom: 50,
+        width: 350,
+        paddingHorizontal: 30,
+        marginLeft: 30,
+        marginTop: 0,
     },
 
     title: {
         color: '#000000',
-        fontSize: 50,
+        fontSize: 30,
         fontFamily: 'Nunito_800ExtraBold',
-        lineHeight: 52,
-    },
-
-    paragraph: {
-        fontFamily: 'Nunito_600SemiBold',
-        fontSize: 20,
-        lineHeight: 30,
+        lineHeight: 36,
+        textAlign: 'right'
     },
 
     nextButton: {

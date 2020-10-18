@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const { Navigator, Screen } = createStackNavigator();
 
 import HappyFirst from './pages/OnBoarding/HappyFirst';
+import HappySecond from './pages/OnBoarding/HappySecond';
 import OrphanagesMap from './pages/OrphanagesMap';
 import OrphanageDetails from './pages/CreateOrphanage/OrphanageDetails'
 import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition';
@@ -19,6 +20,10 @@ export default function Routes() {
                 <Screen
                     name="HappyFirst"
                     component={HappyFirst}
+                />
+                <Screen
+                    name="HappySecond"
+                    component={HappySecond}
                 />
                 <Screen
                     name="OrphanagesMap"
