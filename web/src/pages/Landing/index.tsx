@@ -3,14 +3,14 @@ import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import { PageLanding, ContentWrapper } from './styles';
-import logoImg from '../../images/logo.svg';
+import darkLogoImg from '../../images/darkLogo.svg';
+
 
 function Landing() {
     return (
         <PageLanding>
             <ContentWrapper>
-                <img src={logoImg} alt="Happy" />
-
+                <img src={darkLogoImg} alt="Happy" />
                 <main>
                     <h1>Leve felicidade para o mundo</h1>
                     <p>Visite orfanatos e mude o dia de muitas crianças.</p>

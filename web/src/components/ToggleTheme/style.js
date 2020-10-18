@@ -18,4 +18,8 @@ export const ToggleButton = styled.button`
     outline: none;
 
     z-index: 10;
+
+    &:hover {
+        background-color: #87689f;
+    }
 `;

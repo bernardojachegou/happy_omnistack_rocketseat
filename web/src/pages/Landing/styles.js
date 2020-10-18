@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LandingBackground from '../../images/landing.svg';
+import LandingBackground from '../../images/darkLanding.svg';
 
 export const PageLanding = styled.div`
     height: 100vh;
@@ -44,17 +44,23 @@ export const ContentWrapper = styled.div`
     main {
         max-width: 350px;
     }
+
+    h1, p, .location {
+        transition: all 0.25s linear;
+    }
     
     h1 {
         font-size: 76px;
         font-weight: 900;
         line-height: 70px;
+        color: ${({ theme }) => theme.primaryTextColor};
     }
 
     p {
         margin-top: 40px;
         font-size: 24px;
         line-height: 36px;
+        color: ${({ theme }) => theme.primaryTextColor};
     }
 
     .location {
@@ -66,6 +72,7 @@ export const ContentWrapper = styled.div`
         display: flex;
         flex-direction: column;
         text-align: right;
+        color: ${({ theme }) => theme.secondaryTextColor};
     }
 
     strong {

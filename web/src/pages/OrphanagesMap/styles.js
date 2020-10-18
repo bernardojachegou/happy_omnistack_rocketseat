@@ -20,21 +20,29 @@ export const PageMap = styled.div`
         font-weight: 800;
         line-height: 42px;
         margin-top: 64px;
+        color: ${({ theme }) => theme.primaryTextColor};
     }
     
     p {
         line-height: 28px;
         margin-top: 24px;
+        color: ${({ theme }) => theme.secondaryTextColor};
     }
 
     footer {
         display: flex;
         flex-direction: column;
         line-height: 24px;
+        color: ${({ theme }) => theme.primaryTextColor};
     }
 
     strong {
         font-weight: 800;
+        color: ${({ theme }) => theme.primaryTextColor};
+    }
+
+    h2, p, footer, strong {
+        transition: all 0.25s linear;
     }
 
     .leaflet-container {

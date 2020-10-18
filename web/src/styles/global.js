@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${({ theme }) => theme.primaryColor};
+        background: ${({ theme }) => theme.primaryBackgroundColor};
         transition: all 0.25s linear;
     }
 

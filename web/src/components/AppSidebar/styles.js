@@ -4,11 +4,12 @@ export const AppSidebar = styled.aside`
    position: fixed;
    height: 100%;
    padding: 32px 24px;
-   background: linear-gradient(329.54deg, #9f9d68 0%, #9f9d68 100%);
+   background: ${({ theme }) => theme.secondaryBackgroundColor};
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
+   transition: all 0.25s linear;
 
    img {
       width: 64px;
