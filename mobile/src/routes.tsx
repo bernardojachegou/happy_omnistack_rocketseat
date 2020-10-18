@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const { Navigator, Screen } = createStackNavigator();
 
+import HappyFirst from './pages/OnBoarding/HappyFirst';
 import OrphanagesMap from './pages/OrphanagesMap';
 import OrphanageDetails from './pages/CreateOrphanage/OrphanageDetails'
 import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition';
@@ -15,6 +16,10 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
+                <Screen
+                    name="HappyFirst"
+                    component={HappyFirst}
+                />
                 <Screen
                     name="OrphanagesMap"
                     component={OrphanagesMap}

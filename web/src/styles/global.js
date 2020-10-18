@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: #E3DB94;
+        background: ${({ theme }) => theme.primaryColor};
+        transition: all 0.25s linear;
     }
 
     body, input, button, textarea {
