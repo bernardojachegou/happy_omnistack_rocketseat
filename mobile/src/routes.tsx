@@ -18,10 +18,6 @@ export default function Routes() {
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
                 <Screen
-                    name="ConfirmationPage"
-                    component={ConfirmationPage}
-                />
-                <Screen
                     name="HappyFirst"
                     component={FirstOnBoarding}
                 />
@@ -60,6 +56,10 @@ export default function Routes() {
                 <Screen
                     name="SuccessPage"
                     component={SuccessPage}
+                />
+                <Screen
+                    name="ConfirmationPage"
+                    component={ConfirmationPage}
                 />
             </Navigator>
         </NavigationContainer>

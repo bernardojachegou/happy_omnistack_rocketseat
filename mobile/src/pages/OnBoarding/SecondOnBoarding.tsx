@@ -47,15 +47,10 @@ const styles = StyleSheet.create({
         paddingTop: 40,
     },
 
-    happyIcon: {
-        width: 195,
-        height: 195,
-    },
-
     textContainer: {
         width: 350,
         paddingHorizontal: 30,
-        marginLeft: 30,
+        marginLeft: 50,
         marginTop: 0,
     },
 

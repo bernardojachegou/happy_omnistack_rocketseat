@@ -41,13 +41,15 @@ export default function HappyFirst() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E3DB94'
+        backgroundColor: '#E3DB94',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     imageContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: 300,
+        height: 250,
     },
 
     happyIcon: {

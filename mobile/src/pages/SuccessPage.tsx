@@ -16,23 +16,23 @@ export default function SuccessPage() {
     return (
         <View style={styles.container}>
 
-            <View style={styles.imageContainer}>
-                <Image source={successIcon} />
-            </View>
-
-            <Text style={styles.title}>
-                Ebaaa!
-                </Text>
-            <Text style={styles.paragraph}>
-                O cadastro deu certo e foi enviado ao administrador para ser aprovado. Agora é só esperar :)
-            </Text>
-
-            <RectButton style={styles.nextButton} onPress={handleHappyNextScreen}>
-                <Text style={styles.textButton}>Ok</Text>
-            </RectButton>
-
+        <View style={styles.imageContainer}>
+            <Image source={successIcon} />
         </View>
-    )
+
+        <Text style={styles.title}>
+            Ebaaa!
+            </Text>
+        <Text style={styles.paragraph}>
+            O cadastro deu certo e foi enviado ao administrador para ser aprovado. Agora é só esperar :)
+        </Text>
+
+        <RectButton style={styles.nextButton} onPress={handleHappyNextScreen}>
+            <Text style={styles.textButton}>Ok</Text>
+        </RectButton>
+
+    </View>
+    );
 }
 
 const styles = StyleSheet.create({
