@@ -4,33 +4,28 @@ import { createStackNavigator } from '@react-navigation/stack';
 const { Navigator, Screen } = createStackNavigator();
 
 import Header from './components/Header';
-import FirstOnBoarding from './pages/OnBoarding/FirstOnBoarding';
-import SecondOnBoarding from './pages/OnBoarding/SecondOnBoarding';
-import OrphanagesMap from './pages/OrphanagesMap';
+import Onboarding from './pages/Onboarding/Onboarding';
+import OrphanagesMap from './pages/MainPage/OrphanagesMap';
 import OrphanageDetails from './pages/CreateOrphanage/OrphanageDetails'
 import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition';
 import OrphanageData from './pages/CreateOrphanage/OrphanageData';
-import SuccessPage from './pages/SuccessPage';
-import ConfirmationPage from './pages/ConfirmationPage';
+import SuccessPage from './pages/ResultsPage/SuccessPage';
+import ConfirmationPage from './pages/ResultsPage/ConfirmationPage';
 
 export default function Routes() {
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
                 <Screen
-                    name="HappyFirst"
-                    component={FirstOnBoarding}
-                />
-                <Screen
-                    name="HappySecond"
-                    component={SecondOnBoarding}
+                    name="Onboarding"
+                    component={Onboarding}
                 />
                 <Screen
                     name="OrphanagesMap"
                     component={OrphanagesMap}
                 />
                 <Screen
-                    name="OrphanagesDetails"
+                    name="OrphanageDetails"
                     component={OrphanageDetails}
                     options={{
                         headerShown: true,
