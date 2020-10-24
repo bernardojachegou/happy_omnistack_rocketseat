@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
-import successIcon from '../images/success.png';
+import successIcon from '../../images/success.png';
 
 export default function SuccessPage() {
 

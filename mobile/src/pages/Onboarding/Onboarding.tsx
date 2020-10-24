@@ -31,7 +31,7 @@ export default function OnboardingProcess() {
                     backgroundColor: '#E3DB94',
                     image:
                         <Image
-                            source={require('../images/logo.png')}
+                            source={require('../../images/logo.png')}
                         />,
                     title:
                         <Text style={styles.title}>
@@ -46,7 +46,7 @@ export default function OnboardingProcess() {
                     backgroundColor: '#E3DB94',
                     image:
                         <Image
-                            source={require('../images/landing.png')}
+                            source={require('../../images/landing.png')}
                         />,
                     title:
                         <Text style={styles.secondTitle}>
