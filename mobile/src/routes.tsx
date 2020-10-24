@@ -11,14 +11,15 @@ import OrphanageDetails from './pages/CreateOrphanage/OrphanageDetails'
 import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition';
 import OrphanageData from './pages/CreateOrphanage/OrphanageData';
 import SuccessPage from './pages/SuccessPage';
+import ConfirmationPage from './pages/ConfirmationPage';
 
 export default function Routes() {
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
                 <Screen
-                    name="SuccessPage"
-                    component={SuccessPage}
+                    name="ConfirmationPage"
+                    component={ConfirmationPage}
                 />
                 <Screen
                     name="HappyFirst"
@@ -55,6 +56,10 @@ export default function Routes() {
                         headerShown: true,
                         header: () => <Header title="Informe os dados" />
                     }}
+                />
+                <Screen
+                    name="SuccessPage"
+                    component={SuccessPage}
                 />
             </Navigator>
         </NavigationContainer>
