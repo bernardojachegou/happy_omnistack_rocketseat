@@ -175,7 +175,7 @@ main {
   background: #87689f;
 }
 
-`
+`;
 
 
 
