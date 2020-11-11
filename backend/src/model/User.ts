@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt';
 export default class User {
 
 	@PrimaryGeneratedColumn('increment')
-	user_id: number;
+	id: number;
 
 	@Column()
 	name: string;
@@ -21,13 +21,11 @@ export default class User {
 		cascade: ['insert', 'update']
 	})
 	@JoinColumn({ name: 'user_id' })
-	orphanages: Orphanage;
+	orphanages: Orphanage[];
 
 	@BeforeInsert()
 	@BeforeUpdate()
-	async hashPassword(): Promise<void> {
-		if (!!this.password) {
-			this.password = await bcrypt.hash(this.password, 10);
-		}
+	hashPassword() {
+		this.password = bcrypt.hashSync(this.password, 8);
 	}
 }
