@@ -14,6 +14,12 @@ export default {
 
 		const usersRepository = getRepository(User);
 
+		const userExists = await usersRepository.findOne({ where: { email } });
+
+		if (userExists) {
+			return response.sendStatus(409);
+		}
+
 		const data = {
 			name,
 			email,

@@ -54,7 +54,7 @@
  	2.4.2 Parâmetros - Body: (Tipo json/Multpart-form);
 
 3. Desenvolvimento da aplicação (Banco de dados)
-	3.1 Instalação do typeorm (Object Relational Mapping;
+	3.1 Instalação do typeorm (Object Relational Mapping);
 	3.1.1 Maior nível de abstração (Uma classe para cada tabela);
 	3.2 Criação da conexão com o banco de dados (connection.ts);
 	3.3 Criação das tabelas do BD usando migrations;

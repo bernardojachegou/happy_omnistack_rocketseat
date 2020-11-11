@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate, OneToMany, JoinColumn } from 'typeorm';
+import Orphanage from './Orphanage';
 import * as bcrypt from 'bcrypt';
 
 @Entity('users')
@@ -15,6 +16,12 @@ export default class User {
 
 	@Column({ select: false })
 	password: string;
+
+	@OneToMany(() => Orphanage, orphanage => orphanage.user, {
+		cascade: ['insert', 'update']
+	})
+	@JoinColumn({ name: 'user_id' })
+	orphanages: Orphanage;
 
 	@BeforeInsert()
 	@BeforeUpdate()
