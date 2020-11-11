@@ -9,9 +9,7 @@ import './database/connection';
 import routes from './routes';
 import errorHandler from './errors/handler';
 
-
 const app = express();
-
 // Cors used to allow any frontend to use the API;
 app.use(cors());
 
