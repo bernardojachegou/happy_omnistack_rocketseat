@@ -14,18 +14,18 @@ export default class User {
 	@Column({ unique: true })
 	email: string;
 
-	@Column({ select: false })
+	@Column()
 	password: string;
-
-	@OneToMany(() => Orphanage, orphanage => orphanage.user, {
-		cascade: ['insert', 'update']
-	})
-	@JoinColumn({ name: 'user_id' })
-	orphanages: Orphanage[];
 
 	@BeforeInsert()
 	@BeforeUpdate()
 	hashPassword() {
 		this.password = bcrypt.hashSync(this.password, 8);
 	}
+
+	@OneToMany(() => Orphanage, orphanage => orphanage.user, {
+		cascade: ['insert', 'update']
+	})
+	@JoinColumn({ name: 'user_id' })
+	orphanages: Orphanage[];
 }

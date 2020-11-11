@@ -6,7 +6,6 @@ import OrphanagesController from './controllers/OrphanagesController';
 import UsersController from './controllers/UsersController';
 import AuthController from './controllers/AuthController';
 
-
 const routes = Router();
 const upload = multer(uploadConfig);
 
