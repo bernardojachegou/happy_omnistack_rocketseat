@@ -24,6 +24,8 @@ export default {
 
 		const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1d' });
 
+		// delete user.password;
+
 		return response.json({
 			user,
 			token
