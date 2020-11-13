@@ -5,6 +5,10 @@ import * as Yup from 'yup';
 import User from '../model/User';
 
 export default {
+	index(request: Request, response: Response) {
+		return response.send({ userID: request.userId });
+	},
+
 	async create(request: Request, response: Response) {
 		const {
 			name,
