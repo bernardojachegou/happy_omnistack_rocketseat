@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-
 import User from '../model/User';
+const SECRET = process.env.SECRET;
 
 export default {
 	async authenticate(request: Request, response: Response) {
@@ -22,7 +22,7 @@ export default {
 			return response.sendStatus(401);
 		}
 
-		const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1d' });
+		const token = jwt.sign({ id: user.id }, `${SECRET}`, { expiresIn: '1d' });
 
 		// delete user.password;
 
