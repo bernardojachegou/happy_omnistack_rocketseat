@@ -8,8 +8,8 @@ import './database/connection';
 import routes from './routes';
 import errorHandler from './errors/handler';
 
-// // Leading with dotenv-safe;
-// require("dotenv-safe").config();
+// Leading with dotenv-safe;
+require("dotenv-safe").config();
 
 const app = express();
 // Cors used to allow any frontend to use the API;
