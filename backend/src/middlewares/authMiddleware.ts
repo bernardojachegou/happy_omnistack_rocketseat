@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+const SECRET = process.env.SECRET;
 
 interface TokenPayload {
   id: number;
@@ -7,8 +8,11 @@ interface TokenPayload {
   exp: number;
 }
 
-export default function authMiddleware(request: Request, response: Response, next: NextFunction) {
-
+export default function authMiddleware(
+  request: Request,
+  response: Response,
+  next: NextFunction
+) {
   const { authorization } = request.headers;
 
   if (!authorization) {
@@ -18,7 +22,7 @@ export default function authMiddleware(request: Request, response: Response, nex
   const token = authorization.replace('Bearer', '').trim();
 
   try {
-    const data = jwt.verify(token, 'secret');
+    const data = jwt.verify(token, `${SECRET}`);
 
     const { id } = data as TokenPayload;
 
@@ -30,5 +34,4 @@ export default function authMiddleware(request: Request, response: Response, nex
   } catch {
     return response.sendStatus(401);
   }
-
 }

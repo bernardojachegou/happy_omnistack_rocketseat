@@ -6,30 +6,26 @@ import User from '../model/User';
 const SECRET = process.env.SECRET;
 
 export default {
-	async authenticate(request: Request, response: Response) {
-		const repository = getRepository(User);
-		const { email, password } = request.body;
+  async authenticate(request: Request, response: Response) {
+    const repository = getRepository(User);
+    const { email, password } = request.body;
 
-		const user = await repository.findOne({ where: { email } });
+    const user = await repository.findOne({ where: { email } });
 
-		if (!user) {
-			return response.sendStatus(401);
-		}
+    if (!user) {
+      return response.sendStatus(401);
+    }
 
-		const isValidPassword = await bcrypt.compare(password, user.password);
+    const isValidPassword = await bcrypt.compare(password, user.password);
 
-		if (!isValidPassword) {
-			return response.sendStatus(401);
-		}
+    if (!isValidPassword) {
+      return response.sendStatus(401);
+    }
 
-		const token = jwt.sign({ id: user.id }, `${SECRET}`, { expiresIn: '1d' });
+    const token = jwt.sign({ id: user.id }, `${SECRET}`, { expiresIn: '1d' });
 
-		// delete user.password;
-
-		return response.json({
-			user,
-			token
-		});
-
-	}
-}
+    return response.json({
+      token,
+    });
+  },
+};
