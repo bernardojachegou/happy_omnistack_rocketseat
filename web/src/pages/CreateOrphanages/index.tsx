@@ -1,17 +1,16 @@
-import React, { FormEvent, useState, ChangeEvent } from "react";
-import { Map, Marker, TileLayer, } from 'react-leaflet';
-import { FiPlus } from "react-icons/fi";
+import React, { FormEvent, useState, ChangeEvent } from 'react';
+import { Map, Marker, TileLayer } from 'react-leaflet';
+import { FiPlus } from 'react-icons/fi';
 import { LeafletMouseEvent } from 'leaflet';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
-import { PageCreateOrphanage } from './styles'
-import AppSidebar from "../../components/AppSidebar/index";
-import AppButton from '../../components/AppButton/index'
+import { PageCreateOrphanage } from './styles';
+import AppSidebar from '../../components/AppSidebar/index';
+import AppButton from '../../components/AppButton/index';
 import mapIcon from '../../utils/mapIcon';
-import api from "../../services/api";
+import api from '../../services/api';
 
 export default function CreateOrphanage() {
-
   const history = useHistory();
 
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
@@ -31,11 +30,10 @@ export default function CreateOrphanage() {
     setPosition({
       latitude: lat,
       longitude: lng,
-    })
+    });
   }
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
-
     if (!event.target.files) {
       return;
     }
@@ -44,9 +42,9 @@ export default function CreateOrphanage() {
 
     setImages(selectedImages);
 
-    const selectedImagesPreview = selectedImages.map(image => {
+    const selectedImagesPreview = selectedImages.map((image) => {
       return URL.createObjectURL(image);
-    })
+    });
 
     setPreviewImages(selectedImagesPreview);
   }
@@ -66,9 +64,9 @@ export default function CreateOrphanage() {
     data.append('opening_hours', opening_hours);
     data.append('open_on_weekends', String(open_on_weekends));
 
-    images.forEach(image => {
+    images.forEach((image) => {
       data.append('images', image);
-    })
+    });
 
     await api.post('orphanages', data);
 
@@ -98,9 +96,7 @@ export default function CreateOrphanage() {
                 <Marker
                   interactive={false}
                   icon={mapIcon}
-                  position={[
-                    position.latitude,
-                    position.longitude]}
+                  position={[position.latitude, position.longitude]}
                 />
               )}
             </Map>
@@ -110,17 +106,19 @@ export default function CreateOrphanage() {
               <input
                 id="name"
                 value={name}
-                onChange={event => setName(event.target.value)}
+                onChange={(event) => setName(event.target.value)}
               />
             </div>
 
             <div className="input-block">
-              <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
+              <label htmlFor="about">
+                Sobre <span>Máximo de 300 caracteres</span>
+              </label>
               <textarea
                 id="name"
                 maxLength={300}
                 value={about}
-                onChange={event => setAbout(event.target.value)}
+                onChange={(event) => setAbout(event.target.value)}
               />
             </div>
 
@@ -128,17 +126,20 @@ export default function CreateOrphanage() {
               <label htmlFor="images">Fotos</label>
 
               <div className="images-container">
-                {previewImages.map(image => {
-                  return (
-                    <img key={image} src={image} alt={name} />
-                  )
+                {previewImages.map((image) => {
+                  return <img key={image} src={image} alt={name} />;
                 })}
 
                 <label htmlFor="image[]" className="new-image">
                   <FiPlus size={24} color="#c194e3" />
                 </label>
               </div>
-              <input multiple onChange={handleSelectImages} type="file" id="image[]" />
+              <input
+                multiple
+                onChange={handleSelectImages}
+                type="file"
+                id="image[]"
+              />
             </div>
           </fieldset>
 
@@ -150,7 +151,7 @@ export default function CreateOrphanage() {
               <textarea
                 id="instructions"
                 value={instructions}
-                onChange={event => setInstructions(event.target.value)}
+                onChange={(event) => setInstructions(event.target.value)}
               />
             </div>
 
@@ -159,7 +160,7 @@ export default function CreateOrphanage() {
               <input
                 id="opening_hours"
                 value={opening_hours}
-                onChange={event => setOpeningHours(event.target.value)}
+                onChange={(event) => setOpeningHours(event.target.value)}
               />
             </div>
 
@@ -186,7 +187,6 @@ export default function CreateOrphanage() {
           </fieldset>
 
           <AppButton text="Confirmar" type="submit" />
-
         </form>
       </main>
     </PageCreateOrphanage>
