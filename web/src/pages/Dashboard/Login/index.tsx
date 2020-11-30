@@ -3,11 +3,11 @@ import verticalLogo from '../../../images/verticalLogo.svg';
 import {
   HeroBg,
   LoginBg,
-  LoginButton,
   LoginContainer,
   LoginInput,
   LoginOptionals,
   LoginWrapper,
+  Location,
 } from './styles';
 
 function LoginPage() {
@@ -15,23 +15,30 @@ function LoginPage() {
     <LoginContainer>
       <HeroBg>
         <img src={verticalLogo} alt="Happy logo" />
-        <h1>Happy</h1>
-        <p>Cuiabá</p>
-        <p>Mato Grosso</p>
+        <Location>
+          <p>Cuiabá</p>
+          <p>Mato Grosso</p>
+        </Location>
       </HeroBg>
       <LoginBg>
         <LoginWrapper>
           <h1>Fazer Login</h1>
-          <p>E-mail</p>
-          <LoginInput />
-          <p>Senha</p>
-          <LoginInput />
-          <LoginOptionals>
-            <input type="checkbox" name="checkinfo" />
-            <label htmlFor="checkinfo">Lembrar-me</label>
-            <p>Esqueci minha senha</p>
-          </LoginOptionals>
-          <LoginButton />
+          <div className="item">
+            <label htmlFor="e-mail">Email</label>
+            <LoginInput type="email" />
+          </div>
+          <div className="item">
+            <label htmlFor="e-mail">Senha</label>
+            <LoginInput type="password" />
+            <LoginOptionals>
+              <div id="optionals">
+                <input type="checkbox" name="checkinfo" />
+                <label htmlFor="checkinfo">Lembrar-me</label>
+              </div>
+              <a href="#">Esqueci minha senha</a>
+            </LoginOptionals>
+          </div>
+          <button>Entrar</button>
         </LoginWrapper>
       </LoginBg>
     </LoginContainer>
