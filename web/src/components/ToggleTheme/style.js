@@ -6,17 +6,14 @@ export const ToggleButton = styled.button`
   right: 30px;
   width: 60px;
   height: 60px;
-
   background-color: #87689f;
   border: none;
   border-radius: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 200ms;
   outline: none;
-
   z-index: 10;
 
   &:hover {

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 import verticalLogo from '../../../images/verticalLogo.svg';
 import {
   HeroBg,
@@ -10,7 +12,8 @@ import {
   Location,
 } from './styles';
 
-function LoginPage() {
+export default function LoginPage() {
+  const { goBack } = useHistory();
   return (
     <LoginContainer>
       <HeroBg>
@@ -21,6 +24,9 @@ function LoginPage() {
         </Location>
       </HeroBg>
       <LoginBg>
+        <button type="button" onClick={goBack}>
+          <FiArrowLeft size={24} color="#FFF" />
+        </button>
         <LoginWrapper>
           <h1>Fazer Login</h1>
           <div className="item">
@@ -44,5 +50,3 @@ function LoginPage() {
     </LoginContainer>
   );
 }
-
-export default LoginPage;

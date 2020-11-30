@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const LoginContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  display: grid;
-  grid-template-columns: 70% 1fr;
+  display: flex;
 
   button {
     display: flex;
@@ -35,6 +34,11 @@ export const HeroBg = styled.div`
   justify-content: space-around;
   height: 680px;
   margin-top: 150px;
+  min-width: 70vw;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const Location = styled.div`
@@ -49,7 +53,24 @@ export const LoginBg = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-color: #c194e3;
+  min-width: 30vw;
+
+  @media screen and (max-width: 900px) {
+    min-width: 100vw;
+  }
+
+  button[type='button'] {
+    position: absolute;
+    top: 30px;
+    margin: 0;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
 `;
 
 export const LoginWrapper = styled.div`

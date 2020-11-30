@@ -7,6 +7,8 @@ export const lightTheme = {
   primaryTextColor: '#000000',
   // Others;
   secondaryTextColor: '#000000',
+  // Userboard;
+  userBoardTextColor: '#87689f',
 };
 
 export const darkTheme = {
@@ -18,4 +20,6 @@ export const darkTheme = {
   primaryTextColor: '#FFFFFF',
   // Others;
   secondaryTextColor: '#C194E3',
+  // Userboard;
+  userBoardTextColor: '#FFFFFF',
 };
