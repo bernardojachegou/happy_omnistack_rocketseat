@@ -15,9 +15,9 @@ routes.get('/orphanages', OrphanagesController.index);
 routes.get('/orphanages/:id', OrphanagesController.show);
 routes.post('/orphanages', upload.array('images'), OrphanagesController.create);
 
-routes.post('/auth', AuthController.authenticate);
-
 routes.post('/users', UsersController.create);
+routes.post('/auth', AuthController.authenticate);
 routes.get('/users', authMiddleware, UsersController.index);
+routes.get('/users/:id', authMiddleware, UsersController.index);
 
 export default routes;
