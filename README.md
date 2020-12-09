@@ -88,7 +88,7 @@ $ expo start
 # Expo will open the browser, just scan the QRCode
 ```
 
-## 🤔 Como contribuir:
+## 🤔 How to contribute:
 
 - Fork the project;
 - Create a new branch, example: `git checkout -b my-feature`;
